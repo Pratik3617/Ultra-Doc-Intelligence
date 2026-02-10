@@ -3,8 +3,8 @@ from langchain_core.documents import Document
 from langchain_openai import ChatOpenAI
 from langchain_core.output_parsers import JsonOutputParser
 
-from extraction.prompt import EXTRACTION_PROMPT
-from utils.formatting import format_docs
+from app.extraction.prompt import EXTRACTION_PROMPT
+from app.utils.formatting import format_docs
 
 class ShipmentExtractor:
     def __init__(self, llm: ChatOpenAI):

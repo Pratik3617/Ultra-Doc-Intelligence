@@ -1,6 +1,6 @@
 
 from langchain_core.documents import Document
-from utils.normalize_score import normalize_faiss_score
+from app.utils.normalize_score import normalize_faiss_score
 from typing import List, Tuple
 
 def compute_confidence(

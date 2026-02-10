@@ -1,7 +1,7 @@
 from langchain_core.runnables import RunnableParallel, RunnableLambda, RunnablePassthrough
 from langchain_core.output_parsers import StrOutputParser
 
-from retrieval.retriever import ConfidenceAwareRetriever
+from app.retrieval.retriever import ConfidenceAwareRetriever
 
 def build_rag_pipeline(vector_store, prompt, llm):
     retriever = ConfidenceAwareRetriever(vector_store, k=4)

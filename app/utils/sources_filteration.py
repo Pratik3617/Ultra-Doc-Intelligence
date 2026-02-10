@@ -1,10 +1,20 @@
-def filter_sources(sources, min_len=10):
+def filter_sources_by_score(sources, threshold=0.6, top_k=1):
     """
-    Keep only meaningful source snippets
+    sources: List[dict] with 'score' key
     """
-    filtered = []
-    for src in sources:
-        snippet = src.get("snippet", "").strip()
-        if len(snippet) >= min_len and not snippet.lower() in {"time"}:
-            filtered.append(src)
-    return filtered[:1]
+    if not sources:
+        return []
+
+    # Keep sources under threshold (lower = better for cosine)
+    good_sources = [
+        src for src in sources
+        if src.get("score") is not None and src["score"] <= threshold
+    ]
+
+    # Fallback: take best scored source
+    if not good_sources:
+        good_sources = sorted(
+            sources, key=lambda x: x.get("score", 1.0)
+        )
+
+    return good_sources[:top_k]

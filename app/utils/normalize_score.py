@@ -1,3 +1,4 @@
+# normalize the FAISS score
 def normalize_faiss_score(score: float) -> float:
     """
     Calibrated for OpenAI embedding L2 distances

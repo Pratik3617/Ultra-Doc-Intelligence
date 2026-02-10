@@ -1,3 +1,4 @@
+# combine the context into a single source
 def format_docs(docs, include_source: bool = False):
     if include_source:
         return "\n\n".join(

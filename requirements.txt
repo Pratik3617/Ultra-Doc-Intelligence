@@ -6,3 +6,7 @@ pydantic
 dotenv
 faiss-cpu
 pyPdf
+streamlit
+fastapi
+uvicorn
+python-multipart
