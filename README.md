@@ -12,14 +12,14 @@ This project simulates an AI assistant embedded inside a logistics or freight ma
 
 ## Key Features
 
-* 📄 Upload logistics documents (PDF, DOCX, TXT)
-* 🔍 Ask natural language questions grounded in document content
-* 🧠 Retrieval-Augmented Generation (RAG)
-* 🛡️ Hallucination guardrails
-* 📊 Confidence score per answer
-* 📌 Supporting source evidence
-* 📦 Structured shipment data extraction (JSON)
-* 🌐 REST APIs + lightweight UI
+*  Upload logistics documents (PDF, DOCX, TXT)
+*  Ask natural language questions grounded in document content
+*  Retrieval-Augmented Generation (RAG)
+*  Hallucination guardrails
+*  Confidence score per answer
+*  Supporting source evidence
+*  Structured shipment data extraction (JSON)
+*  REST APIs + lightweight UI
 
 ---
 
