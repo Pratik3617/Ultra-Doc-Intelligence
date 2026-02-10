@@ -27,14 +27,14 @@ class ConfidenceAwareRetriever:
                 "confidence": 0.0
             }
 
-        # ---- Chunk-level context for LLM ----
+        # Chunk-level context for LLM 
         docs = [doc for doc, _ in scored_docs]
         context = format_docs(docs, include_source=False)
 
-        # ---- Confidence ----
+        # Confidence
         confidence = float(compute_confidence(scored_docs, self.k))
 
-        # ---- Sentence-level evidence ----
+        # Sentence-level evidence
         question_embedding = self.vector_store.embeddings.embed_query(question)
 
         sources = []
